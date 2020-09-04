@@ -1,0 +1,8 @@
+{
+  id: @product.id,
+  title: @product.title,
+  artist: @product.artist,
+  price: @product.price,
+  image_url: @product.image_url,
+  description: @product.description,
+}
