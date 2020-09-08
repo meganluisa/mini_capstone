@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#   rails generate model Product title:string artist:string price:integer image_url:string description:string
 
+#   rails generate model Product title:string artist:string price:integer image_url:string description:string
+#   rails generate model Product title:string price:integer image_url:string description:string
 # product = Product.new({ title: "The Starry Night", artist: "Vincent van Gogh", price: 1050000, image_url: "https://www.vangoghstudio.com//Files/6/102000/102147/ProductPhotos/Source/307257209.jpg", description: "Oil on Canvas. Created in 1889. This artwork is located at MoMA in New York, USA." })
 # product.save
 
