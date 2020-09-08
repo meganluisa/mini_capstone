@@ -3,4 +3,7 @@
  price: product.price,
  image_url: product.image_url,
  description: product.description,
- updated_at: product.friendly_updated_at }
+ updated_at: product.friendly_updated_at,
+ formatted: {
+  price: number_to_currency(product.price),
+} }
