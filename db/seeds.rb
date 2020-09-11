@@ -8,6 +8,7 @@
 
 #   rails generate model Product title:string artist:string price:integer image_url:string description:string
 #   rails generate model Product title:string price:integer image_url:string description:string
+
 # product = Product.new({ title: "The Starry Night", artist: "Vincent van Gogh", price: 1050000, image_url: "https://www.vangoghstudio.com//Files/6/102000/102147/ProductPhotos/Source/307257209.jpg", description: "Oil on Canvas. Created in 1889. This artwork is located at MoMA in New York, USA." })
 # product.save
 
@@ -22,3 +23,18 @@
 
 # product = Product.new ({ title: "Mona Lisa", artist: "Leonardo da Vinci", price: 10, image_url: "https://cdn.mos.cms.futurecdn.net/SSsejZ9krDiV9N8TExmRGZ-1200-80.jpg", description: "Oil on canvas. Created 1503. Stored at Louvre Museum since 1797." })
 # product.save
+
+# image = Image.new({ url: "https://www.vangoghstudio.com//Files/6/102000/102147/ProductPhotos/Source/307257209.jpg", product_id: 1 })
+# image.save
+
+# image = Image.new({ url: "https://i.pinimg.com/originals/06/61/6f/06616fa2e34e85428458dd6b00214d97.jpg", product_id: 2 })
+# image.save
+
+# image = Image.new({ url: "https://vitruvius.museumseven.com/render/600-600@2/dp-476799-22.jpg", product_id: 3 })
+# image.save
+
+# image = Image.new({ url: "https://vitruvius.museumseven.com/render/600-600@2/dp-461079-30.jpg", product_id: 4 })
+# image.save
+
+# image = Image.new({ url: "https://cdn.mos.cms.futurecdn.net/SSsejZ9krDiV9N8TExmRGZ-1200-80.jpg", product_id: 6 })
+image.save
