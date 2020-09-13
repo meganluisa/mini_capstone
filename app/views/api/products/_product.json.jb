@@ -1,7 +1,8 @@
 { id: product.id,
  title: "#{product.title}, #{product.artist}",
  price: product.price,
- image_url: product.image_url,
+ images: product.images, #map { |url| url },
+ image_urls: product.images.map { |image| image.url },
  description: product.description,
  updated_at: product.friendly_updated_at,
  formatted: {

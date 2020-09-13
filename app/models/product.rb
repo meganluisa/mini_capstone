@@ -6,7 +6,7 @@ class Product < ApplicationRecord
   # def supplier
   #   Supplier.find_by(id: supplier_id)
   # end
-  has_many :image
+  has_many :images
 
   def friendly_updated_at
     updated_at.strftime("%m/%d/%Y %I:%M%p")
