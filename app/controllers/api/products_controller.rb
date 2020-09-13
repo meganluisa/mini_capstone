@@ -26,7 +26,10 @@ class Api::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new ({ title: params[:title], artist: params[:artist], price: params[:price], description: params[:description] })
+    @product = Product.new ({ title: params[:title],
+                              artist: params[:artist],
+                              price: params[:price],
+                              description: params[:description] })
     @product.save
 
     if @product.save
