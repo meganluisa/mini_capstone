@@ -8,6 +8,8 @@ class Product < ApplicationRecord
   # end
   has_many :images
   has_many :orders
+  has_many :category_products
+  has_many :categories, through: :category_products
 
   def friendly_updated_at
     updated_at.strftime("%m/%d/%Y %I:%M%p")

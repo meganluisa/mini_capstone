@@ -1,8 +1,18 @@
 class Api::OrdersController < ApplicationController
+  before_action :authenticate_user, except: [:index]
+
+  def index
+    @orders = current_user.orders
+    render "index.json.jb"
+  end
+
+  # def show
+  #   @order = current_user.orders.find_by(id: params[:id])
+  #   render json: { order: @order }
+  # end
+
   def create
-    if current_user
-      # tax = 0.9
-      # subtotal = params[:product_id].price
+    if current_user && current_user.admin
       product = Product.find_by(id: params[:product_id])
       subtotal = product.price * params[:quantity].to_i
       tax = 0.9

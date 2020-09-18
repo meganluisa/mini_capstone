@@ -2,9 +2,9 @@
  title: "#{product.title}, #{product.artist}",
  price: product.price,
  images: product.images,
- #image_urls: product.images.map { |image| image.url },
  description: product.description,
  updated_at: product.friendly_updated_at,
+ categories: product.categories,
  formatted: {
   price: number_to_currency(product.price),
 } }
