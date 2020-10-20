@@ -27,6 +27,10 @@ class Api::OrdersController < ApplicationController
     # @order = Order.new({ user_id: current_user.id, product_id: params[:product_id], quantity: params[:quantity], subtotal: subtotal, tax: tax, total: total })
     # @order.save
     if @order.save
+      carted_products.each do |carted_product|
+        carted_product.status = "purchased"
+        carted_product.order_id = @order.id
+      end
       render "show.json.jb"
     else
       render json: { errors: product } #@order.errors.full_messages

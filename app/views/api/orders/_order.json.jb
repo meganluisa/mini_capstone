@@ -1,0 +1,13 @@
+{
+  id: @order.id,
+  current_user: @order.user_id,
+  subtotal: @order.subtotal,
+  tax: @order.tax,
+  total: @order.total,
+  carted_products: @order.carted_products.each do |carted_product|
+    id: carted_product.id,
+    quantity: carted_product.quantity,
+    product: carted_product.product,
+  end
+
+}

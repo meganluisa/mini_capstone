@@ -1,0 +1,8 @@
+<h1> Product </h1>
+<h1> Name: <%= "#{@product.title}, #{@product.artist}"%> </h1>
+<h4> Price: <%= @product.price %> </h4>
+  <% @product.images.each do |image| %>
+    <img src="<%= image.url %>" height=500px width=450px>
+ <% end %> 
+<h4> Description: <%=@product.description %></h4>
+ <p><a href="/products">All products</a></p>
